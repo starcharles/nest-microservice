@@ -5,8 +5,7 @@ import { MathController } from './math/math.controller';
 
 @Module({
   imports: [],
-  // controllers: [AppController, MathController],
-  controllers: [MathController],
+  controllers: [AppController, MathController],
   providers: [AppService],
 })
 export class AppModule {}

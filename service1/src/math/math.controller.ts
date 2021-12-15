@@ -9,14 +9,6 @@ export class MathController {
     return (data || []).reduce((a, b) => a + b);
   }
 
-  @MessagePattern('notification')
-  getNotifications(@Payload() data: number[], @Ctx() context: RedisContext) {
-    console.log(`Channel: ${context.getChannel()}`);
-    console.log(context);
-    console.log(data);
-    return data;
-  }
-
   @EventPattern('user_created')
   async handleUserCreated(data: Record<string, unknown>) {
     console.log(data);

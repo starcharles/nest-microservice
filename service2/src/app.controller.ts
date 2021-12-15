@@ -20,9 +20,4 @@ export class AppController {
   getUser() {
     return this.appService.userPublish();
   }
-
-  @Get('notification')
-  getNotification():Observable<any> {
-    return this.appService.notification();
-  }
 }

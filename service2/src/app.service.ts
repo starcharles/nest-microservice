@@ -12,10 +12,6 @@ export class AppService {
 
   }
 
-  async onModuleInit(){
-    console.log('onModuleInit')
-    await this.client.connect();
-  }
   getHello(): string {
     return 'Hello World!';
   }
@@ -28,10 +24,5 @@ export class AppService {
 
   userPublish() {
     this.client.emit('user_created', new UserCreatedEvent());
-  }
-
-  notification():Observable<any> {
-    console.log('notification');
-    return this.client.emit('notification', new NotificationEvent());
   }
 }

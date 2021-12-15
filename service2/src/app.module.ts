@@ -8,10 +8,7 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
     ClientsModule.register([
       {
         name: 'MATH_SERVICE',
-        transport: Transport.REDIS,
-        options: {
-          url: 'redis://localhost:6379',
-        }
+        transport: Transport.TCP,
       },
     ]),
   ],
