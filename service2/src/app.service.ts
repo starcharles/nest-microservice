@@ -12,10 +12,6 @@ export class AppService {
 
   }
 
-  async onModuleInit(){
-    console.log('onModuleInit')
-    await this.client.connect();
-  }
   getHello(): string {
     return 'Hello World!';
   }
